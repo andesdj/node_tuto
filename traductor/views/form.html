@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include  ('head.html') %>
+</head>
+
+<body>
+     <h3 style="color: #5454fa">
+        <%= title  %>
+    </h3>
+    <div class="container">
+        <p> Ingrese un texto para ser traducido y seleccione el idioma.</p>
+        <div class="input-field col s12 l12">
+        
+            <form action="/sub-form" method="post" id="traductor">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea required id="t1" class="materialize-textarea entrataT" data-length="3000" name="t1"></textarea>
+                <label for="t1">Ingresa el texto aquì</label>
+        </div>
+        <div class="input-field col s12 l12">
+            <i class="material-icons prefix">translate</i>
+            <select name="opc" required form="traductor">
+              <option value="en-es" data-icon="images/EN_ES.png" >English - Spanish</option>
+              <option value="es-en" data-icon="images/ES_EN.png">Español- Inglés</option>
+            </select>
+            <label>Seleccione un idioma</label>
+        </div>
+        <br><br>
+        <input id="t5" type="submit" class="validate btn  btn-blue">
+        </form>
+
+    </div>
+
+
+</body>
+<footer>
+    <%- include  ('foot.html') %>
+</footer>
+<script>
+    $(document).ready(function() {
+        $('select').formSelect();
+        Materialize.updateTextFields();
+        $('entradaT').characterCounter();
+        $('#textarea1').val('New Text');
+        M.textareaAutoResize($('#textarea1'));
+    });
+</script>
+
+</html>

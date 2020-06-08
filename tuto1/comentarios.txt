@@ -1,0 +1,12 @@
+Express es un framework de Node 
+EJS: es el Motor de Plantillas
+Morgan: ver que es lo que los usuarios piden en el navegador en Logs
+nodemon: No es util pero es indispensable para el desarrollo 
+npm i nodemon -D
+
+Todos los archivos se pondrán en /src 
+
+Express
+-----------------------------------------------
+al Instanciar Express.
+app es el servidor 

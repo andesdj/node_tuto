@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include  ('head.html') %>
+</head>
+
+<body>
+    <h3 style="color: #5454fa">
+        <%= title  %>
+    </h3>
+
+
+    <div class="container">
+
+        <h6>
+            Salida:
+            <%=opcT.target %>
+        </h6>
+        <div class="input-field col s12 l12">
+            <p>
+                Traductor: <strong> <%= opcT.model_id %></strong>
+            </p>
+            <p>
+                <%= msg %>
+            </p>
+
+        </div>
+
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</script>
+<script>
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+        $('entradaT').characterCounter();
+
+        $('#textarea1').val('New Text');
+        M.textareaAutoResize($('#textarea1'));
+    });
+</script>
+
+</html>
